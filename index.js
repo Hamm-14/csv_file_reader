@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require('express');   //using express as a server
 const port = 8000;
 const path = require('path');
 const fs = require('fs');
 
-const app = express();
+const app = express();         //initializing express
 
 app.set('view engine','ejs');  //setting up view engine as ejs
 app.set('views',path.join(__dirname,'views'));   //setting path of views folder
@@ -11,10 +11,10 @@ app.set('views',path.join(__dirname,'views'));   //setting path of views folder
 app.use(express.urlencoded({extended: true}));  //using parser to read form data
 
 app.use(express.static('assets'));    //accesing static files from assets folder
-app.use('/uploads',express.static(__dirname+'/uploads'));
+app.use('/uploads',express.static(__dirname+'/uploads'));   //accesing uploaded files from uploads folder 
 
 
-app.use('/',require('./routes/index'));
+app.use('/',require('./routes/index'));    //using index file of routes for all the routes
 
 app.listen(port,function(err){
     if(err){

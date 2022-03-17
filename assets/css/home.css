@@ -116,3 +116,36 @@ hr{
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* Media Queries */
+@media screen and (max-width:600px) {
+	html{
+		font-size: 9px;
+	}
+	main{
+	    height: 80%;
+	    width: 90%;
+	    top: 5%;
+	    left: 5%;
+	}
+	#files-container{
+		width: 80%;
+	}
+	.file{
+		width: 90%;
+		height: 15%;
+		padding: 1.2rem;
+	}
+	.file-open-button a{
+		font-size: 0.8rem;
+	}
+
+	.file-open-button{
+		width: 3rem;
+		height: 2rem;
+		padding-top: 0.2rem;
+	}
+	.h1-style{
+		margin-top: 1rem;
+	}
+}
